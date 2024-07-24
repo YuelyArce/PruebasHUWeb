@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-       GIT_REPO = 'ISIS2603_202420_S1_E1_Mascotas_Front'
-       GIT_CREDENTIAL_ID = '7c21addc-0cbf-4f2e-9bd8-eced479c56c6'
+       GIT_REPO = 'MISW4104_202415_E01'
+       GIT_CREDENTIAL_ID = '43771338-0057-4a96-ae03-93ee5419d871'
        SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-isis2603'
        SONAR_TOKEN = credentials('sonar-login')
     }
@@ -12,7 +12,7 @@ pipeline {
              scmSkip(deleteBuild: true, skipPattern:'.*\\[ci-skip\\].*')
              git branch: 'main',
                 credentialsId: env.GIT_CREDENTIAL_ID,
-                url: 'https://github.com/Uniandes-isis2603/' + env.GIT_REPO
+                url: 'https://github.com/MISW-4104-Web/' + env.GIT_REPO
           }
        }
        stage('Statistical analysis') { 
