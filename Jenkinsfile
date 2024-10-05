@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-       GIT_REPO = 'MISW4104_202415_E01'
+       GIT_REPO = 'MISW4104_202415_E02'
        GIT_CREDENTIAL_ID = '43771338-0057-4a96-ae03-93ee5419d871'
-       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-isis2603'
+       SONARQUBE_URL = 'http://172.24.100.52:8082/sonar-misovirtual'
        SONAR_TOKEN = credentials('sonar-login')
     }
     stages {
