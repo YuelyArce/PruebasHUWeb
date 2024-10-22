@@ -1,0 +1,17 @@
+<div class="actor-detalle">
+  <img [src]="actor?.imagen" alt="Foto del actor">
+  <h2>{{ actor?.nombre }}</h2>
+  <p>{{ actor?.nacionalidad }}</p>
+  <p>{{ actor?.biografia }}</p>
+  <li *ngFor="let pelicula of actor?.peliculas">
+  
+
+  <h3>Películas:</h3>
+  <ul>
+    <li *ngFor="let pelicula of actor.peliculas">
+      <a [routerLink]="['/peliculas', pelicula.id]">{{ pelicula.titulo }}</a>
+    </li>
+  </ul>
+
+  <button (click)="regresar()">Volver al listado de actores</button>
+</div>

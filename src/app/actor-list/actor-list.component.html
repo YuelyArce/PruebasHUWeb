@@ -1,0 +1,14 @@
+<div *ngFor="let actor of actores" class="actor-card">
+  <img [src]="actor.imagen" alt="Foto del actor">
+  <div class="actor-detalle">
+    <h3>{{ actor.nombre }}</h3>
+    <p>{{ actor.nacionalidad }}</p>
+    <button (click)="verDetalleActor(actor.id)">Más info</button>
+  </div>
+</div>
+
+<!-- Paginación -->
+<div class="paginacion">
+  <button (click)="paginaAnterior()">Anterior</button>
+  <button (click)="paginaSiguiente()">Siguiente</button>
+</div>
